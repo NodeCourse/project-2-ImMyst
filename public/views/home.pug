@@ -1,0 +1,30 @@
+html
+  head
+    title Best Citations - Home
+    link(rel="stylesheet", href="/css/home.css")
+    link(href="https://fonts.googleapis.com/css?family=Prompt:300" rel="stylesheet")
+
+  body
+    main
+        nav 
+          ul(class="navbar")
+            li 
+              a(class="nav" href="/") Home
+            li 
+              a(class="nav" href="/add-citation") Add Citations
+        img(class="main-img" src="/img/main.jpg")
+        div(class="container")
+          div(class="title")
+                h1(class="m-title") Best philosophic <br>(or not)<br> citations
+                  
+                div(class="citations")
+                  h1 Citations :
+                  div(class="get-citations")
+                    for citation in citations
+                      
+                      article
+                        
+                        h1 <i> #{citation.citation} <i/>
+                        h2 #{citation.author}
+                        hr
+                

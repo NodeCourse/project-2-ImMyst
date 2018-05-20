@@ -1,0 +1,34 @@
+html
+  head
+    title Best Citations - Add Citations
+    link(rel="stylesheet", href="/css/addcitation.css")
+    link(href="https://fonts.googleapis.com/css?family=Prompt:300" rel="stylesheet")
+  body
+    main
+      nav 
+        ul(class="navbar")
+          li 
+            a(class="nav" href="/") Home
+          li 
+            a(class="nav" href="/add-citation") Add Citations
+      img(class="main-img" src="/img/main.jpg")
+      div(class="title")
+        h1(class="m-title") Add a Citation
+      div(class="container")
+        article
+          form(method="post", action="/api/post/addcitation")
+            h1 Citation : 
+              br
+              br
+              label(for="citation")
+              input(type="text" required, id="citation", name="citation")
+              br
+            h1 Author :
+              br
+              br
+              label(for="author" )
+              input(type="text" required, id="author", name="author")
+              br
+          center
+            button(type="submit") Soumettre
+            
